@@ -25,5 +25,5 @@ ________________________________________________________________________________
 <h3>How to use</h3>
 
 ```bash
-$ docker build -t app.py . && docker run -ot --rm --name Dockerfile app.py
+$ sudo docker build -t app.py . && sudo docker run -it --rm --name Dockerfile app.py
 ```
