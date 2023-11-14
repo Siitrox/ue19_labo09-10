@@ -21,6 +21,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        CONTAINER_NAME=$(docker inspect --format='{{index .Config.Labels "name"}}' .)
+        docker buildx create --use
         docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/${{ github.repository }}/Docker_dad_jokes:latest .
         docker push ghcr.io/${{ github.repository }}/Docker_dad_jokes:latest
