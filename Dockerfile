@@ -1,6 +1,6 @@
 FROM python:3
 
-LABEL name="Docker_dad_jokes"
+LABEL name="docker_dad_jokes"
 
 WORKDIR /home/archusr/School/B2/Q1/UE19-Principes_avancés/Exercice/Labo_5/ue19_labo09-10
 
