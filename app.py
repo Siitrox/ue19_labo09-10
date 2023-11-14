@@ -1,4 +1,4 @@
-# Programme interrogeant l'API
+# Programme interrogeant l'API de générateur de 'dad jokes'
 import requests
 
 
