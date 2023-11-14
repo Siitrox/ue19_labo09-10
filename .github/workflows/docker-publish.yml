@@ -21,7 +21,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        CONTAINER_NAME=$(docker ps --format '{{json .Names}}' --filter "ancestor=$(docker inspect --format '{{index .Config.Labels "name"}}' .)")
-        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/siitrox/$CONTAINER_NAME:latest .
-        docker push ghcr.io/siitrox/$CONTAINER_NAME:latest
+        CONTAINER_NAME=$(docker inspect --format '{{index .Config.Labels "name"}}' $(docker ps -q --filter "ancestor=$(docker inspect --format '{{index .Config.Labels "name"}}' .")))
+        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/${{ github.repository }}/$CONTAINER_NAME:latest .
+        docker push ghcr.io/${{ github.repository }}/$CONTAINER_NAME:latest
+
 
