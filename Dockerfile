@@ -1,4 +1,4 @@
-FROM ubuntu-latest
+FROM ubuntu:latest
 
 WORKDIR /home/archusr/School/B2/Q1/UE19-Principes_avancés/Exercice/Labo_5/ue19_labo09-10
 
