@@ -18,7 +18,7 @@ jobs:
 
     - name: Login to GitHub Packages
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-
+    #Test numéro 6
     - name: Build and push Docker image
       run: |
         CONTAINER_NAME=$(docker ps --format '{{json .Names}}' --filter "ancestor=$(docker inspect --format='{{index .Config.Labels "name"}}' ."))
