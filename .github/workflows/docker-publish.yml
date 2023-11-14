@@ -21,5 +21,5 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/siitrox/docker_dad_jokes:latest -f /home/archusr/School/B2/Q1/UE19-Principes_avancés/Exercice/Labo_5/ue19_labo09-10/Dockerfile .
+        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/siitrox/docker_dad_jokes:latest .
         docker push ghcr.io/siitrox/docker_dad_jokes:latest
