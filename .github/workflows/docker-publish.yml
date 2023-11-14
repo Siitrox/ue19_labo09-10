@@ -21,7 +21,5 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        CONTAINER_NAME=docker_dad_jokes
-        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/siitrox/docker_dad_jokes:latest --push .
+        docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/siitrox/docker_dad_jokes:latest -f ../../Dockerfile .
         docker push ghcr.io/siitrox/docker_dad_jokes:latest
-
