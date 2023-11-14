@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Aqua Security Trivy
-      uses: aquasecurity/trivy-action@0.14.0
-
     - name: Checkout repository
       uses: actions/checkout@v2
 
@@ -26,3 +23,6 @@ jobs:
       run: |
         docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/siitrox/docker_dad_jokes:latest .
         docker push ghcr.io/siitrox/docker_dad_jokes:latest
+
+    - name: Aqua Security Trivy
+      uses: aquasecurity/trivy-action@0.14.0
