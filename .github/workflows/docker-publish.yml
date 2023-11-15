@@ -55,5 +55,3 @@ jobs:
           image-ref: 'ghcr.io/siitrox/ue19_labo09-10:main'
           format: 'sarif'
           output: 'trivy-image-results.sarif'
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
